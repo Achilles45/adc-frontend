@@ -1,0 +1,23 @@
+@import "../../../styles/abstracts/variables";
+
+.results{
+    &__header{
+        display: grid;
+        grid-template-columns: 1fr 200px 1fr;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 30px;
+
+        h3{
+            padding-top: 1.5rem;
+            color: #343434;
+            font-family: $font;
+            text-transform: capitalize;
+        }
+
+        span{
+            height: .1rem;
+            background: #ebebeb;
+        }
+    }
+}

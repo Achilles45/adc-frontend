@@ -1,0 +1,35 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/base/typography";
+.tools{
+    margin: 2rem 0;
+    margin-bottom: 3rem;
+    background: $col-light;
+
+    &__content{
+        background: #fcfcfc;
+        padding: 3.5rem 3rem;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-gap: 30px;
+        justify-content: space-between;
+
+        &__text{
+            h1{
+                font-family: $font-bold;
+                padding-bottom: 1rem;
+                color: #000;
+            }
+            p{
+                padding-bottom: 3rem;
+                opacity: .65;
+                color: #000;
+                font-size: 1rem;
+                font-weight: bold;
+                line-height: 2;
+            }
+        }
+
+    }
+}

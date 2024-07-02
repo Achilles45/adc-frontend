@@ -1,0 +1,25 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.page_intro{
+    margin-bottom: 1.5rem;
+    h2{
+        font-family: $font;
+        font-weight: bolder;
+        font-size: 1.15rem;
+        padding-bottom: .2rem;
+        color: #1b1b1b;
+        @include phone {
+            font-size: .95rem;
+        }
+    }
+    p{
+        font-size: .92rem;
+        font-weight: bold;
+        color: #343434;
+        opacity: .7;
+        @include phone {
+            font-size: .8rem;
+        }
+    }
+}

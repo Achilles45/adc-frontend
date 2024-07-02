@@ -1,0 +1,60 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.sidebar{
+    border-right: 1px solid #ebebeb;
+    height: 100vh;
+    background: #FFF;
+
+    @include phone {
+        height: auto;
+    }
+
+    &__logo{
+        border-bottom: 1px solid #ebebeb;
+        padding: .9rem 2rem;
+        background: #FFF;
+        @include phone {
+            display: none;
+        }
+    }
+
+    &__links{
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 3rem;
+
+        @include phone {
+            padding-left: 1.5rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+//Non active sidebar link
+.link{
+    display: flex;
+    align-items: center;
+    padding: .8rem 1.5rem;
+    border-radius: 6px;
+    color: #343434;
+    gap: 10px;
+    font-family: $font;
+    font-weight: bold;
+    font-size: .85rem;
+    margin-bottom: .7rem;
+
+    @include phone {
+        font-size: .8rem;
+        padding: .7rem 1.2rem;
+        width: 80%
+    }
+
+}
+
+//Active sidebar link
+.active{
+    @extend .link;
+    background: $col-primary-btn;
+    color: #FFF;
+}

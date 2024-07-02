@@ -1,0 +1,66 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.bottom__bar{
+    box-shadow: 0px 2px 2px rgba(0,0,0,.015);
+    background: #FFF;
+    border-bottom: 1px solid #ebebeb;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+    padding: .7rem 1rem;
+    padding-top: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    // gap: 32px;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #343434;
+    font-family: $font;
+    font-weight: bold;
+    font-size: .9rem;
+    span {
+        color: #343434;
+        height: 30px;
+        width: 30px;
+        background: #F4F4F4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+    }
+    p{
+        padding-top: .3rem;
+        color: #343434;
+        font-size: .8rem;
+        font-weight: bold
+    }
+}
+
+//Active sidebar link
+.active{
+    @extend .link;
+    span{
+        color: $col-primary-btn;
+        height: 30px;
+        width: 30px;
+        background: #F4F4F4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+    }
+
+    p{
+        padding-top: .3rem;
+        color: $col-primary-btn;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+}

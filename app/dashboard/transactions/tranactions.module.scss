@@ -1,0 +1,158 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.transactions{
+    @include phone {
+        width: 95.5%;
+
+    }
+    
+    &__balance{
+        background: linear-gradient(rgba(133, 162, 67, 0.99), rgba(167,201,87, .92)), url("../../../public/assets/waves.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 1.7rem 2rem;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 340px;
+        position: relative;
+
+        // @include phone {
+        //     flex: 0 0 300px;
+        //     padding: 1.5rem;
+        // }
+    
+        &__thumbnail{
+            position: absolute;
+            bottom: 1rem;
+            right: .5rem;
+            // @include phone {
+            //     height: 60px;
+            //     width: 60px;
+            // }
+        }
+    
+        &__top{
+            display: flex;
+            flex-direction: column;
+            // border-bottom: 1px solid #076929;
+            // padding-bottom: 1rem;
+    
+            h4{
+                color: #FFF;
+                font-family: $font-bold;
+                font-size: .95rem;
+                padding-bottom: .5rem;
+            }
+
+            h2{
+                padding-bottom: 1rem;
+                font-family: $font-bold;
+                color: #FFF;
+            }
+        }
+    
+        &__bottom{
+            padding-top: .5rem;
+            color: #FFF;
+            display: flex;
+            gap: 20px;
+            width: 50%;
+            // @include phone {
+            //     width: 60%;
+            // }
+    
+            a{
+                background: rgba(97, 130, 20, 0.99);
+                color: #FFF;
+                padding: .7rem 1rem;
+                border-radius: 4px;
+                font-size: .8rem;
+                font-family: $font-bold;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                width: 70%;
+                text-transform: capitalize;
+                @include phone {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__transactions{
+        background: #FFF;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-top: 2rem;
+        width: 100%;
+
+        h3{
+            color: #343434;
+            font-weight: bold;
+            @include phone {
+                width: 100%;
+            }
+        }
+
+        p{
+            color: #343434;
+            font-size: .85rem;
+            font-weight: bold;
+            padding-bottom: .2rem;
+            width: 40%;
+            @include phone {
+                width: 100%;
+            }
+        }
+
+    //Tab section
+    &__tab{
+        background: #f7f7f7;
+        border: 1px solid #f1f1f1;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem .7rem;
+        align-items: center;
+        font-size: .85rem;
+        font-weight: bold;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
+        width: 70%;
+        margin-top: 1rem;
+        @include phone {
+            width: 100%;
+            padding: .5rem .6rem !important;
+        }
+
+        &--item{
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 120px;
+
+            &--active{
+                background: rgba(97, 130, 20, 0.99);
+                color: #FFF;
+                border-radius: 6px;
+                padding: .4rem 1rem;
+                cursor: pointer;
+                font-size: .85rem;
+                font-weight: bold;
+                @include phone {
+                    flex: 0 0 160px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    }
+}

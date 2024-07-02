@@ -1,0 +1,95 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.analytics__card{
+    background: linear-gradient(rgba(2, 85, 49, 0.99), rgba(2, 85, 49, 0.95)), url("../../../../public/assets/waves.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1.5rem 2rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 340px;
+    position: relative;
+    @include phone {
+        flex: 0 0 300px;
+        padding: 1.5rem;
+    }
+
+    &__thumbnail{
+        position: absolute;
+        bottom: .5rem;
+        right: .5rem;
+        @include phone {
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // border-bottom: 1px solid #076929;
+        // padding-bottom: 1rem;
+
+        h4{
+            color: #FFF;
+            font-family: $font-bold;
+            font-size: .95rem;
+            @include phone {
+                font-size: .85rem;
+            }
+        }
+    }
+
+    &__bottom{
+        padding-top: .5rem;
+        color: #FFF;
+
+        h3{
+            padding-bottom: 1rem;
+            font-family: $font-bold;
+            @include phone {
+                font-size: .95rem;
+            }
+        }
+
+        a{
+            background: $col-primary-btn;
+            color: #FFF;
+            padding: .5rem 1rem;
+            border-radius: 4px;
+            font-size: .8rem;
+            font-family: $font-bold;
+            display: block;
+            text-align: center;
+            width: 70%;
+            @include phone {
+                font-size: .7rem;
+                padding: .4rem 1rem
+            }
+        }
+    }
+}
+
+//Save 
+.analytics__card--save{
+    @extend .analytics__card;
+    background: linear-gradient(rgba(133, 162, 67, 0.99), rgba(167,201,87, .92)), url("../../../../public/assets/waves.svg");
+    a{
+        background: rgba(97, 130, 20, 0.99);
+    }
+    background-position: center
+}
+
+//Invest 
+.analytics__card--invest{
+    @extend .analytics__card;
+    background: linear-gradient(rgba(60, 100, 36, 0.99), rgba(106,153,78, .92)), url("../../../../public/assets/waves.svg");
+    a{
+        background: rgba(54, 101, 26, 0.99);
+    }
+    background-position: center;
+}

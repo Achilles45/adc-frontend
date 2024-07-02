@@ -1,0 +1,37 @@
+@import "../abstracts/functions";
+
+
+@mixin body {
+  font-size: toRem(18px);
+  font-weight: 400;
+  line-height: toRem(28px);
+  letter-spacing: 0em;
+}
+
+
+  
+@font-face {
+  font-family: "Font";
+  src: url("../../../public/Moderat/Moderat-Extended-Light.ttf");
+}
+
+@font-face {
+  font-family: "Font Bold";
+  src: url("../../../public//montserrat/Montserrat-Bold.ttf");
+}
+
+
+@font-face {
+  font-family: "Moderat Bold";
+  src: url("../../../public/Moderat/Moderat-Black.ttf");
+}
+
+@font-face {
+  font-family: "Moderat Medium";
+  src: url("../../../public/Moderat/Moderat-Medium.ttf");
+}
+
+// @font-face {
+//   font-family: "Font Bold";
+//   src: url("../../../public/font/Scandia-Bold.ttf");
+// }

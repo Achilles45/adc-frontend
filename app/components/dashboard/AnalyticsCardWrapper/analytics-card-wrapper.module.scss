@@ -1,0 +1,21 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.analytics{
+    // background: #FFF;
+    // padding: 2rem;
+    // border-radius: 10px;
+    // border: 1px solid #ebebeb;
+
+    &__grid{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        gap: 20px;
+
+        @include phone {
+            gap: 15px;
+        }
+    }
+}

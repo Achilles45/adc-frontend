@@ -1,0 +1,34 @@
+@import "../../../styles/abstracts/mixins";
+@import "../../../styles/abstracts/variables";
+
+.faqs{
+    margin-bottom: 2rem;
+    margin-bottom: 8rem;
+    background: $col-light;
+
+    &__header{
+        text-align: center;
+        padding-bottom: 2rem;
+        h1{
+            font-family: $font-bold;
+            font-size: 3rem;
+        }
+    }
+
+    &__details{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+// Media Queries
+@include phone {
+    .faqs{
+        margin-bottom: 4rem !important;
+        &__header{
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+}

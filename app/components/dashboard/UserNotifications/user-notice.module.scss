@@ -1,0 +1,24 @@
+@import "../../../styles/abstracts/variables";
+
+.user__notice{
+    background: #FFF;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+
+    &__header{
+        padding-bottom: .5rem;
+        h3{
+            font-weight: 800;
+            color: #1b1b1b;
+        }
+    
+        p{
+            font-size: .85rem;
+            font-weight: bold;
+            opacity: .7;
+            padding-bottom: 1.2rem;
+            padding-top: .3rem;
+        }
+       }
+}

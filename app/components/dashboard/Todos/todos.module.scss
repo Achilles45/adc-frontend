@@ -1,0 +1,53 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.todos{
+    margin-top: 2rem;
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    &__header{
+        padding-bottom: .5rem;
+        h3{
+            font-weight: 800;
+            color: #1b1b1b;
+            @include phone {
+                font-size: 1rem;
+            }
+        }
+    
+        p{
+            font-size: .85rem;
+            font-weight: bold;
+            opacity: .7;
+            padding-bottom: 1.2rem;
+            padding-top: .3rem;
+            @include phone {
+                font-size: .8rem;
+                padding-bottom: 1rem;
+            }
+        }
+       }
+
+    &__todos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+        grid-row-gap: 12px;
+        text-align: center;
+        cursor: pointer;
+        padding-bottom: .5rem;
+
+        @include phone {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+            grid-gap: 15px;
+        }
+
+        a{
+            color: $col-primary-btn;
+            font-weight: bold;
+            font-size: .85rem;
+        }
+    }
+}

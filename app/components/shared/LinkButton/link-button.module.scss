@@ -1,0 +1,23 @@
+@import "../../../styles/abstracts/variables";
+
+.link__button{
+    background: #F0F0F0;
+    border-radius: 6px;
+    padding: 1rem 2rem;
+    color: #3b3b3b;
+    font-family: $font;
+    font-weight: bold;
+    font-size: .98rem;
+}
+
+.link__button__primary{
+    @extend .link__button;
+    background: $col-primary-btn;
+    color: #fff;
+}
+
+.link__button__dark{
+    @extend .link__button;
+    background: $col-dark;
+    color: #fff;
+}

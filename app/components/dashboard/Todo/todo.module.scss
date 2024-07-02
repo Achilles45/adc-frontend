@@ -1,0 +1,19 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.todo{
+    border: 1px solid $col-primary-btn;
+    padding: .8rem 1.3rem;
+    border-radius: 6px;
+    transition: all ease .5s;
+    background: #FFF;
+    @include phone {
+        padding: .8rem .7rem;
+        font-size: .78rem !important;
+    }
+}
+
+.todo:hover{
+    background: $col-primary-btn;
+    color: #FFF !important;
+}

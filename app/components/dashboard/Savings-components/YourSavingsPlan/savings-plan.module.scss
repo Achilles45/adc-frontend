@@ -1,0 +1,84 @@
+@import "../../../../styles/abstracts/variables";
+
+.savings__plans{
+    background: #FFF;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin-top: 2rem;
+
+    &__header{
+        h3{
+            font-weight: 800;
+            color: #343434;
+        }
+        p{
+            font-size: .85rem;
+            font-weight: bold;
+            opacity: .7;
+            padding-bottom: 1.2rem;
+            padding-top: .3rem;
+        }
+    }
+
+    &__grid{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        gap: 20px;
+
+        &__item{
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 300px;
+            padding: 1.5rem 2rem;
+            border-radius: 6px;
+            color: #FFF;
+            cursor: pointer;
+
+            span{
+                background: #FFF;
+                color: $col-primary-btn;
+                font-weight: bold;
+                width: 40%;
+                font-size: .8rem;
+                cursor: pointer;
+                text-align: center;
+                border-radius: 6px;
+                padding: .3rem .7rem;
+                margin-top: .7rem;
+            }
+
+            &__top{
+                display: flex;
+                justify-content: space-between;
+
+                h3{
+                    padding-bottom: 1rem;
+                    font-family: $font-bold;
+                    font-size: 1rem;
+                }
+            }
+
+            &:nth-child(odd){
+                background: linear-gradient(rgba(60, 100, 36, 0.99), rgba(106,153,78, .92)), url("../../../../../public/assets/waves.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            &:nth-child(even){
+                background: linear-gradient(rgba(133, 162, 67, 0.99), rgba(167,201,87, .92)), url("../../../../../public/assets/waves.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            // &:nth-child(3){
+            //     background: yellow;
+            // }
+
+        }
+    }
+}

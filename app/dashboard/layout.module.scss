@@ -1,0 +1,85 @@
+@import "../styles/abstracts/variables";
+@import "../styles/abstracts/mixins";
+
+.layout{
+    background: #F7F7F7;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    font-family: $font;
+    position: relative;
+    // grid-gap: 50px;
+    @include phone {
+        grid-template-columns: 1fr;
+    }
+
+    &__bottombar{
+        display: none;
+        @include phone {
+            display: block;
+        }
+    }
+
+
+    &__sidebar{
+        position: fixed;
+        @include phone {
+            width: 70%;
+            z-index: 888;
+            height: auto; 
+            top: 5.4rem;
+            display: none;
+        }
+    }
+
+    &__content{
+        position: absolute;
+        left: 290px;
+        right: 0;
+        width: calc(100% - 310px); 
+        background: #F7F7F7;
+        @include phone {
+            left: 0;
+            // width: 100vw !important;
+        }
+
+        &__navbar{
+            position: fixed;
+            width: calc(100% - 290px);
+            z-index: 20;
+            background: #FFF;
+            @include phone {
+                width: 100%;
+            }
+        }
+        &--children{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 310px;
+            padding: 2rem;
+            padding-top: 6.3rem;
+            position: relative;
+            @include phone {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+                width: 100vw;
+                padding-top: 5.2rem;
+                margin-bottom: 4rem;
+            }
+
+
+            &--rightbar{
+                position: fixed;
+                width: 310px;
+                right: 1.5rem;
+                top: 7rem;
+                z-index: 2;
+                height: 100vh;
+
+                @include phone {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@import "../../styles/abstracts/variables";
+
+.account{
+
+    //Banner section
+    &__banner{
+        background: linear-gradient(rgba(2, 85, 49, 0.99), rgba(2, 85, 49, 0.95)), url("../../../public/assets/waves.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 1.7rem 2rem;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 340px;
+        position: relative;
+        margin-bottom: 2rem;
+
+        h3{
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        p{
+            color: #FFF;
+            font-size: .85rem;
+            padding-top: .3rem;
+            font-weight: bold;
+            padding-bottom: .2rem;
+            border-bottom: 1px solid $col-success-bg;
+            width: 40%;
+        }
+
+        &__btn{
+            background: $col-primary-btn;
+            color: #FFF;
+            padding: .7rem 1rem;
+            border-radius: 4px;
+            font-size: .8rem;
+            font-family: $font-bold;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            text-transform: capitalize;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+    
+        &__thumbnail{
+            position: absolute;
+            bottom: 1rem;
+            right: .5rem;
+        }
+    
+
+    }
+
+    //Tab section
+    &__tab{
+        background: #f4f4f4;
+        border: 1px solid #ebebeb;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        // width: 50%;
+        padding: .5rem .7rem;
+        align-items: center;
+        font-size: .85rem;
+        font-weight: bold;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
+
+        &--item{
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 150px;
+            &--active{
+                background: $col-primary-btn;
+                color: #FFF;
+                border-radius: 6px;
+                padding: .4rem 1rem;
+                cursor: pointer;
+                font-size: .85rem;
+                font-weight: bold;
+            }
+        }
+    }
+}

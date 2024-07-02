@@ -1,0 +1,10 @@
+@import "../../styles/abstracts/variables";
+
+.auth{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-gap: 50px;
+    height: 100vh;
+    padding: 2rem;
+    background: #FFF;
+}

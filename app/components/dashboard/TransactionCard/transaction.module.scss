@@ -1,0 +1,98 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.transaction{
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    padding: .5rem .5rem;
+    margin-bottom: .7rem;
+    display: grid;
+    grid-template-columns: 70px 1fr 100px;
+    align-items: center;
+    grid-column-gap: 10px;
+    // width: 80%;
+    cursor: pointer;
+    @include phone {
+        grid-template-columns: 40px 1fr 70px;
+        padding: .1rem .3rem !important;
+    }
+
+    &__grid2{
+        padding-left: 1rem;
+        @include phone {
+            display: flex;
+            flex-direction: column;
+        }
+        p{
+            font-weight: bold;
+            font-size: .75rem;
+            color: #1b1b1b;
+            @include phone {
+                font-size: .7rem;
+            }
+        }
+        small{
+            font-size: .75rem;
+            color: #1b1b1b;
+            opacity: .8;
+            padding-top: 0 !important;
+        }
+    }
+
+    &__grid3{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        @include phone {
+            flex-direction: column;
+        }
+        p{
+            font-size: .85rem;
+            color: rgba(17, 94, 119, 0.98);
+            font-weight: 900;
+            @include phone {
+                font-size: .78rem;
+            }
+        }
+        // small{
+        //     font-size: .7rem;
+        //     color: #627081;
+        //     font-weight: bold;
+        // }
+    }
+
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        border-radius: 5px;
+        padding: .5rem 2rem;
+        font-size: .75rem;
+        font-weight: bold;
+        @include phone {
+            font-size: .6rem;
+            padding: .4rem 1.5rem;
+        }
+    }
+
+    &__credit{
+        @extend .card;
+        color: $col-success-color;
+        background: $col-success-bg;
+    }
+
+    &__debit{
+        @extend .card;
+        background: $col-danger-bg;
+        color: $col-danger-color;
+    }
+
+    .credit{
+        color: $col-success-color;
+    }
+    .debit{
+        color: $col-danger-color;
+    }
+}

@@ -1,0 +1,67 @@
+@import "../../../styles/abstracts/variables";
+
+.calculate{
+    &__header{
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+
+        h3{
+            padding-bottom: 2rem;
+        }
+        h1{
+            font-size: 5rem;
+            font-size: $font-bold !important;
+
+            span{
+                font-size: 2rem;
+            }
+        }
+
+        &__form{
+            display: flex;
+            gap: 20px;
+            background: #FFF;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            box-shadow: -1px 1px 5px 0px rgba(0,0,0,.055);
+            border-radius: 10px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            div{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+                label{
+                    font-size: .85rem;
+                    font-family: $font;
+                    font-weight: bold;
+                    opacity: .7;
+                    padding-bottom: .4rem;
+                }
+            }
+
+            input, select{
+                padding: 1rem;
+                width: 250px;
+                border: 1px solid #ebebeb;
+                border-radius: 6px;
+                font-family: $font !important;
+                font-weight: bold;
+                opacity: .7;
+            }
+            &--btn{
+                background: $col-dark;
+                color: #FFF;
+                border-radius: 6px;
+                font-weight: bold;
+                padding: 1rem;
+                cursor: pointer;
+                font-family: $font !important;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

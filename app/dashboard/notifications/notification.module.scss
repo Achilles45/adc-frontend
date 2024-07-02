@@ -1,0 +1,66 @@
+@import "../../styles/abstracts/variables";
+
+.notifications{
+
+    &__balance{
+        background: linear-gradient(rgba(133, 162, 67, 0.99), rgba(167,201,87, .92)), url("../../../public/assets/waves.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 1.7rem 2rem;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 340px;
+        position: relative;
+    
+        &__thumbnail{
+            position: absolute;
+            bottom: 1rem;
+            right: .5rem;
+        }
+    
+        &__top{
+            display: flex;
+            flex-direction: column;
+            // border-bottom: 1px solid #076929;
+            // padding-bottom: 1rem;
+    
+            p{
+                color: #FFF;
+                font-size: .95rem;
+                font-weight: bold;
+                padding-bottom: 1rem;
+            }
+
+            h2{
+                padding-bottom: .5rem;
+                font-family: $font-bold;
+                color: #FFF;
+            }
+        }
+    
+        &__bottom{
+            padding-top: .5rem;
+            color: #FFF;
+            display: flex;
+            gap: 20px;
+            width: 50%;
+    
+            a{
+                background: rgba(97, 130, 20, 0.99);
+                color: #FFF;
+                padding: .7rem 1rem;
+                border-radius: 4px;
+                font-size: .8rem;
+                font-family: $font-bold;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                width: 70%;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

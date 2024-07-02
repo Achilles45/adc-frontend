@@ -1,0 +1,151 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.start{
+    // background: $col-dark;
+    padding: 2rem 0;
+    margin-bottom: 2rem !important;
+    background: $col-light;
+    &__content{
+        &__header{
+            h1{
+                padding-bottom: 1rem;
+                text-transform: none;
+                font-size: 3rem;
+                font-family: $font-bold;
+                line-height: 1.2;
+                color: $col-dark
+              }
+              p{
+                padding-bottom: 1rem;
+                font-size: 1.05rem;
+                font-weight: bold;
+                opacity: .65 !important;
+                width: 50%;
+                line-height: 2;
+              }
+        }
+
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 40px;
+            padding-top: 0rem;
+
+            &__item{
+                padding: 2.4rem 0rem;
+                position: relative;
+                z-index: 1;
+
+                &__iconholder{
+                display: flex;
+                gap: 50px;
+                align-items: center;
+
+                &__icon{
+                    background: #F2F2F2;
+                    height: 3rem;
+                    width: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50px;
+                    color: $col-dark;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+
+                &--span{
+                    // border-bottom: 2px solid #ECF5EE;
+                    height: 2px;
+                    width: 100%;
+                    @include phone {
+                        display: none;
+                    }
+                }
+            }
+                h6{
+                    font-family: $font;
+                    font-weight: bolder;
+                    padding-top: 1.4rem;
+                    font-size: 1.2rem;
+                    color: $col-dark;
+                }
+                p{
+                    font-size: .93rem;
+                    opacity: .6;
+                    line-height: 1.9;
+                    padding-top: .4rem;
+                    font-weight: bold;
+                    // font-weight: bold;
+                    @include phone {
+                        font-size: 1.06rem !important;
+                        padding-top: .4rem;
+                    }
+                }
+            }
+        }
+        &__button{
+            text-align: center;
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+    
+            &--btn{
+                background: $col-primary;
+                color: $col-dark;
+                padding: 1.3rem 3rem;
+                border-radius: 10px;
+                // font-family: $font-medium;
+                font-size: 1rem;
+            }
+            :hover{
+                color: #FFF !important;
+                transition: all ease .5s;
+            }
+        }
+    }
+}
+
+// Media Queries 
+@include phone {
+    .start{
+        padding: 0 .8rem;
+        &__content{
+            &__header{
+                // text-align: center;
+                h1{
+                    font-size: 2.5rem;
+                    line-height: 1.3;
+                }
+                p{
+                    font-size: 1.05rem;
+                    width: 100%;
+                }
+            }
+            &__grid{
+                grid-gap: 0px;
+                &__item{
+                    &__iconholder{
+                        gap: 20px;
+                        &__icon{
+                            height: 3rem;
+                            width: 3rem;
+                        }
+                        &--span{
+                            width: 60%;
+                        }
+                    }
+                    h6{
+                        font-size: 1.3rem;
+                    }
+                    p{
+                        font-size: .95rem;
+                    }
+                }
+            }
+            &__button{
+                padding-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.onboarding{
+    // height: 100vh;
+    background-color: $col-primary-btn;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow-x: hidden;
+    border-radius: 10px;
+    &__logo__section{
+        padding-bottom: 2rem;
+        span{
+            font-weight: bolder;
+            color: #000;
+            font-family: $font-bold;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .secondary__span{
+            color: $col-secondary;
+        }
+    }
+
+    &__image__section{
+        margin: 3rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text{
+        color: #FFF;
+        opacity: 1 !important;
+        h2{
+            font-family: $font-bold;
+            padding-bottom: .5rem;
+        }
+        p{
+            opacity: .95;
+            color: #FFF;
+            font-size: .95rem;
+            line-height: 1.8;
+            font-weight: bold;
+        }
+    }
+}
+
+.onboarding::-webkit-scrollbar{
+    display: none !important;
+}
+
+//Media Queries for small phones
+@include phone{
+    .onboarding{
+        display: none;
+    }
+}
+
+//Media Queries for tabs
+@include tab { 
+    .onboarding{
+        display: none;
+    } 
+}

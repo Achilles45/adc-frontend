@@ -1,0 +1,66 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.intro{
+    padding: 2rem 0;
+    color: $col-dark;
+    background: $col-light;
+
+    &__header{
+        max-width: 920px;
+        h2{
+            font-family: $font-bold;
+            line-height: 1.6;
+            padding-top: 3rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 30px;
+        padding-top: 4rem;
+
+        &__item{
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+
+            &--icon1{
+                background: #ECF5ED;
+                padding: .6rem 1rem;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &--icon2{
+               @extend .intro__grid__item--icon1;
+               background: #F6EDED;
+            }
+
+            &--icon3{
+                @extend .intro__grid__item--icon1;
+                background: #E5EFFA;
+             }
+
+            &--text{
+                h3{
+                    font-family: $font-bold;
+                    font-size: 1.15rem;
+                    opacity: .8;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: .88rem;
+                    opacity: .6;
+                    line-height: 1.8;
+                    padding-top: .4rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

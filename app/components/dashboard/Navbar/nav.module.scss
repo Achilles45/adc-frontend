@@ -1,0 +1,104 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
+.nav{
+    border-bottom: 1px solid #ebebeb;
+    padding: 1.15rem 2rem;
+    font-family: $font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include phone {
+        padding: 1rem 1.5rem;
+    }
+
+    p{
+        @include phone {
+            padding-right: 3.5rem;
+        }
+    }
+
+    &__left{
+        @include phone {
+            display: none;
+        }
+    }
+
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+
+        &__helper{
+            position: absolute;
+            background: #FFF;
+            box-shadow: -1px 1px 1px 1px rgba(0,0,0,.10);
+            top: 3.3rem;
+            right: 0;
+            padding: 1rem 2rem;
+            z-index: 2;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            hr{
+                border: 1px solid #ebebeb !important;
+            }
+
+            &--header{
+                transition: all ease-in-out .5s;
+                p{
+                    font-size: .8rem !important;
+                }
+            }
+
+            &--body{
+                display: flex;
+                flex-direction: column;
+
+                span{
+                    background: $col-primary-btn;
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 30px;
+                    width: 30px;
+                    text-align: center;
+                    color: #FFF;
+                    margin-right: .5rem;
+
+                }
+
+                a{
+                    width: 100%;
+                    line-height: 4;
+                    color: #343434;
+                    font-weight: bold;
+                    font-size: .9rem;
+                    opacity: .8;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #ebebeb;
+                }
+                p{
+                    font-size: .9rem;
+                    font-weight: bold;
+                    background: $col-danger-bg;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    padding: .6rem;
+                    text-align: center;
+                    border-radius: 6px;
+                    color: $col-danger-color;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        p{
+            font-size: .9rem;
+            font-weight: bold;
+        }
+    }
+}
