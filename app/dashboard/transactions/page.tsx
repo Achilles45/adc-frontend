@@ -65,8 +65,7 @@ const Transactions = () => {
         </div>
 
         <div className={ styles["transactions__transactions"] }>
-            <h3>Your Transactions</h3>
-            <p>Make sense of your transactions details</p>
+            <PageIntro title="Your Transactions" description="Make sense of your transactions data today" />
 
             <div className={ styles["transactions__transactions__tab"] }>
                 <div onClick={ () => toggleActiveState(1) } className={ toggleActive === 1 ? styles["transactions__transactions__tab--item--active"] : styles["transactions__transactions__tab--item"] }>All Transactions</div>

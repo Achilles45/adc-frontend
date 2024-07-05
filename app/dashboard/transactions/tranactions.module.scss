@@ -3,7 +3,7 @@
 
 .transactions{
     @include phone {
-        width: 95.5%;
+       overflow: hidden;
 
     }
     
@@ -18,20 +18,18 @@
         flex-direction: column;
         flex: 0 0 340px;
         position: relative;
-
-        // @include phone {
-        //     flex: 0 0 300px;
-        //     padding: 1.5rem;
-        // }
+        @include phone {
+            padding: 1.2rem;
+        }
     
         &__thumbnail{
             position: absolute;
             bottom: 1rem;
             right: .5rem;
-            // @include phone {
-            //     height: 60px;
-            //     width: 60px;
-            // }
+            @include phone {
+                height: 60px;
+                width: 60px;
+            }
         }
     
         &__top{
@@ -45,12 +43,19 @@
                 font-family: $font-bold;
                 font-size: .95rem;
                 padding-bottom: .5rem;
+                @include phone {
+                    font-size: .95rem;
+                }
             }
 
             h2{
                 padding-bottom: 1rem;
                 font-family: $font-bold;
                 color: #FFF;
+                @include phone {
+                    font-size: .95rem;
+                    padding-bottom: .5rem;
+                }
             }
         }
     
@@ -60,9 +65,9 @@
             display: flex;
             gap: 20px;
             width: 50%;
-            // @include phone {
-            //     width: 60%;
-            // }
+            @include phone {
+                width: 100%;
+            }
     
             a{
                 background: rgba(97, 130, 20, 0.99);
@@ -78,7 +83,9 @@
                 width: 70%;
                 text-transform: capitalize;
                 @include phone {
-                    width: 100%;
+                    width: 70%;
+                    font-size: .7rem;
+                    padding: .5rem 1rem
                 }
             }
         }

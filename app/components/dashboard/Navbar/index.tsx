@@ -5,7 +5,8 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import Image from "next/image";
 import avater from "../../../../public/assets/avatar.svg"
 import Link from "next/link";
-import { MdOutlineDashboardCustomize, MdManageAccounts, MdNotificationsActive } from "react-icons/md";
+import { MdOutlineDashboardCustomize, MdNotificationsActive } from "react-icons/md";
+import { FaCodeBranch } from "react-icons/fa"
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { authSlice } from "@/redux/selectors";
@@ -40,7 +41,7 @@ const DashboardNavbar = () => {
           </div>
           <div className={ styles["nav__right__helper--body"] }>
             <Link href=""><span><MdOutlineDashboardCustomize /></span> My Dashboard</Link>
-            <Link href=""> <span><MdManageAccounts /></span> Account Profile</Link>
+            <Link href=""> <span><FaCodeBranch /></span> Transactions</Link>
             <Link href=""> <span><MdNotificationsActive /></span> Notifications</Link>
             <hr />
             <p>Logout</p>

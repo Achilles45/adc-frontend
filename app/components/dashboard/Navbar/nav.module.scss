@@ -40,6 +40,9 @@
             z-index: 2;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
+            @include phone {
+                top: 3.2rem;
+            }
 
             hr{
                 border: 1px solid #ebebeb !important;
@@ -47,6 +50,11 @@
 
             &--header{
                 transition: all ease-in-out .5s;
+                h3{
+                    @include phone {
+                        font-size: .85rem;
+                    }
+                }
                 p{
                     font-size: .8rem !important;
                 }
@@ -67,6 +75,11 @@
                     text-align: center;
                     color: #FFF;
                     margin-right: .5rem;
+                    @include phone{
+                        height: 25px;
+                        width: 25px;
+                        font-size: .9rem;
+                    }
 
                 }
 
@@ -80,6 +93,9 @@
                     display: flex;
                     align-items: center;
                     border-bottom: 1px solid #ebebeb;
+                    @include phone {
+                        font-size: .8rem;
+                    }
                 }
                 p{
                     font-size: .9rem;
@@ -92,6 +108,9 @@
                     border-radius: 6px;
                     color: $col-danger-color;
                     cursor: pointer;
+                    @include phone {
+                        font-size: .8rem;
+                    }
                 }
             }
         }
