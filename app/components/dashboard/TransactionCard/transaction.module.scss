@@ -14,7 +14,7 @@
     cursor: pointer;
     @include phone {
         grid-template-columns: 35px 1fr 70px;
-        padding: .3rem .3rem !important;
+        padding: .4rem .4rem !important;
     }
 
     &__grid2{

@@ -20,7 +20,7 @@ const Savings = () => {
                 <h2>&#8358;850,850.00</h2>
             </div>
             <div className={ styles["savings__balance__bottom"] }>
-               <Link className={ styles["savings__balance__bottom--new"] } href="">New Savings Plan</Link>
+               <Link className={ styles["savings__balance__bottom--new"] } href="">Create New Plan</Link>
                <Link className={ styles["savings__balance__bottom--add"] } href="">Top Up Savings</Link>
             </div>
         </div>
