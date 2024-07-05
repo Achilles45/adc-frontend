@@ -1,6 +1,10 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .account{
+    @include phone {
+        overflow: hidden;
+    }
 
     //Banner section
     &__banner{
@@ -15,10 +19,16 @@
         flex: 0 0 340px;
         position: relative;
         margin-bottom: 2rem;
+        @include phone {
+            padding: 1.2rem;
+        }
 
         h3{
             color: #FFF;
             font-weight: bold;
+            @include phone {
+                font-size: .9rem;
+            }
         }
 
         p{
@@ -29,6 +39,10 @@
             padding-bottom: .2rem;
             border-bottom: 1px solid $col-success-bg;
             width: 40%;
+            @include phone {
+                width: 80%;
+                font-size: .75rem;
+            }
         }
 
         &__btn{
@@ -46,12 +60,22 @@
             text-transform: capitalize;
             margin-top: 1rem;
             cursor: pointer;
+            @include phone {
+                width: 80%;
+                padding: .4rem 1rem;
+                font-size: .7rem;
+            }
         }
     
         &__thumbnail{
             position: absolute;
             bottom: 1rem;
             right: .5rem;
+            @include phone {
+                height: 50px;
+                width: 50px;
+                top: 1rem;
+            }
         }
     
 
@@ -80,6 +104,11 @@
             display: flex;
             flex-direction: column;
             flex: 0 0 150px;
+            @include phone {
+                flex: 0 0 150px; 
+                width: 100%;
+                font-size: .75rem;
+            }
             &--active{
                 background: $col-primary-btn;
                 color: #FFF;
@@ -88,6 +117,12 @@
                 cursor: pointer;
                 font-size: .85rem;
                 font-weight: bold;
+                @include phone{
+                    width: 100%;
+                    flex: 0 0 180px; 
+                    text-align: center;
+                    font-size: .75rem;
+                }
             }
         }
     }

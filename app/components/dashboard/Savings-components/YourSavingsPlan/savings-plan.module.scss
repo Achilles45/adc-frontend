@@ -17,6 +17,9 @@
         overflow-x: auto;
         width: 100%;
         gap: 20px;
+        @include phone {
+            gap: 10px;
+        }
 
         &__item{
             display: flex;
@@ -27,7 +30,7 @@
             color: #FFF;
             cursor: pointer;
             @include phone {
-                flex: 0 0 250px; 
+                flex: 0 0 235px; 
                 padding: 1rem;
             }
 
@@ -50,13 +53,16 @@
             &__top{
                 display: flex;
                 justify-content: space-between;
+                @include phone {
+                    border-bottom: 1px solid #dadadad4;
+                }
 
                 h3{
                     padding-bottom: .5rem;
                     font-family: $font-bold;
                     font-size: 1rem;
                     @include phone {
-                        font-size: .8rem;
+                        font-size: .75rem;
                         padding-bottom: .3rem;
                     }
                 }
@@ -64,7 +70,7 @@
                     font-size: .85rem;
                     padding-bottom: .3rem;
                     @include phone {
-                        font-size: .75rem;
+                        font-size: .7rem;
                     }
                 }
             }
