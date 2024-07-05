@@ -1,4 +1,5 @@
 @import "../../../../styles/abstracts/variables";
+@import "../../../../styles/abstracts/mixins";
 
 .savings__plans{
     background: #FFF;
@@ -6,19 +7,8 @@
     border-radius: 10px;
     border: 1px solid #ebebeb;
     margin-top: 2rem;
-
-    &__header{
-        h3{
-            font-weight: 800;
-            color: #343434;
-        }
-        p{
-            font-size: .85rem;
-            font-weight: bold;
-            opacity: .7;
-            padding-bottom: 1.2rem;
-            padding-top: .3rem;
-        }
+    @include phone {
+        padding: 1.5rem;
     }
 
     &__grid{
@@ -32,22 +22,29 @@
             display: flex;
             flex-direction: column;
             flex: 0 0 300px;
-            padding: 1.5rem 2rem;
+            padding: 1.5rem 1.5rem;
             border-radius: 6px;
             color: #FFF;
             cursor: pointer;
+            @include phone {
+                flex: 0 0 250px; 
+                padding: 1rem;
+            }
 
             span{
                 background: #FFF;
                 color: $col-primary-btn;
                 font-weight: bold;
-                width: 40%;
+                width: 100%;
                 font-size: .8rem;
                 cursor: pointer;
                 text-align: center;
                 border-radius: 6px;
-                padding: .3rem .7rem;
+                padding: .5rem .7rem;
                 margin-top: .7rem;
+                @include phone {
+                    width: 100%;
+                }
             }
 
             &__top{
@@ -55,9 +52,20 @@
                 justify-content: space-between;
 
                 h3{
-                    padding-bottom: 1rem;
+                    padding-bottom: .5rem;
                     font-family: $font-bold;
                     font-size: 1rem;
+                    @include phone {
+                        font-size: .8rem;
+                        padding-bottom: .3rem;
+                    }
+                }
+                h5{
+                    font-size: .85rem;
+                    padding-bottom: .3rem;
+                    @include phone {
+                        font-size: .75rem;
+                    }
                 }
             }
 

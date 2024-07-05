@@ -6,9 +6,12 @@
     display: grid;
     width: calc(1fr - 210px) !important;
     background: #FFF;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 10px;
     border: 1px solid #ebebeb;
+    @include phone {
+        padding: 1.5rem 1.5rem;
+    }
     &__header{
         padding-bottom: .5rem;
         h3{

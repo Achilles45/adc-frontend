@@ -1,6 +1,10 @@
 @import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .savings{
+    @include phone{
+        overflow-x: hidden;
+    }
     &__balance{
         background: linear-gradient(rgba(60, 100, 36, 0.99), rgba(106,153,78, .92)), url("../../../public/assets/waves.svg");
         background-repeat: no-repeat;
@@ -12,11 +16,19 @@
         flex-direction: column;
         flex: 0 0 340px;
         position: relative;
+        @include phone {
+            padding: 1.2rem;
+        }
     
         &__thumbnail{
             position: absolute;
             bottom: 1rem;
             right: .5rem;
+            @include phone {
+                height: 50px;
+                width: 50px;
+                top: 1rem;
+            }
         }
     
         &__top{
@@ -30,12 +42,19 @@
                 font-family: $font-bold;
                 font-size: .95rem;
                 padding-bottom: .5rem;
+                @include phone {
+                    font-size: .95rem;
+                }
             }
 
             h2{
                 padding-bottom: 1rem;
                 font-family: $font-bold;
                 color: #FFF;
+                @include phone {
+                    font-size: .95rem;
+                    padding-bottom: .5rem;
+                }
             }
         }
     
@@ -45,6 +64,11 @@
             display: flex;
             gap: 20px;
             width: 70%;
+            @include phone {
+                flex-direction: row;
+                width: 100%;
+                gap: 5px;
+            }
     
             a{
                 background: rgba(54, 101, 26, 0.99);
@@ -59,6 +83,11 @@
                 justify-content: center;
                 width: 70%;
                 text-transform: capitalize;
+                @include phone {
+                    width: 70%;
+                    font-size: .7rem;
+                    padding: .5rem 1rem
+                }
             }
         }
     }

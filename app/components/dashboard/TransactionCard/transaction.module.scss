@@ -13,7 +13,7 @@
     // width: 80%;
     cursor: pointer;
     @include phone {
-        grid-template-columns: 0 1fr 70px;
+        grid-template-columns: 35px 1fr 70px;
         padding: .3rem .3rem !important;
     }
 
@@ -22,14 +22,14 @@
         @include phone {
             display: flex;
             flex-direction: column;
-            padding-left: 0;
+            padding-left: .2rem;
         }
         p{
             font-weight: bold;
             font-size: .75rem;
             color: #1b1b1b;
             @include phone {
-                font-size: .7rem;
+                font-size: .6rem;
             }
         }
         small{
@@ -74,8 +74,8 @@
         font-weight: bold;
         @include phone {
             font-size: .6rem;
-            padding: .4rem 1rem;
-            display: none
+            padding: .4rem 1.2rem;
+            // display: none
         }
     }
 

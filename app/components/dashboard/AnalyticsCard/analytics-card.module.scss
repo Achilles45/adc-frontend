@@ -13,7 +13,7 @@
     flex: 0 0 340px;
     position: relative;
     @include phone {
-        flex: 0 0 260px;
+        flex: 0 0 270px;
         padding: 1.2rem 1.2rem;
     }
 
@@ -68,7 +68,7 @@
             width: 70%;
             @include phone {
                 font-size: .7rem;
-                padding: .4rem 1rem
+                padding: .5rem 1rem
             }
         }
     }
