@@ -19,7 +19,7 @@ const Plans = () => {
         <div className={ styles["plans__tab"] }>
           <div onClick={ () => toggleActiveState(1) } className={ toggleActive === 1 ? styles["plans__tab--item--active"] : styles["plans__tab--item"] }>Investments</div>
 
-          <div onClick={ () => toggleActiveState(2) } className={ toggleActive === 2 ? styles["plans__tab--item--active"] : styles["plans__tab--item"] }>Savings Plans</div>
+          <div onClick={ () => toggleActiveState(2) } className={ toggleActive === 2 ? styles["plans__tab--item--active"] : styles["plans__tab--item"] }>Savings</div>
         </div>
         <div className={ styles["plans__grid"] }>
           <SingleInvestmentCard duration="Six months" minAmount="100,000" roi={20}  />

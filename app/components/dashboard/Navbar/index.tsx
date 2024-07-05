@@ -7,6 +7,8 @@ import avater from "../../../../public/assets/avatar.svg"
 import Link from "next/link";
 import { MdOutlineDashboardCustomize, MdManageAccounts, MdNotificationsActive } from "react-icons/md";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { authSlice } from "@/redux/selectors";
 
 // interface navProps {
 //     toggleMenu: () => void
@@ -19,17 +21,20 @@ const DashboardNavbar = () => {
     setShowLinksModal(!showLinksModal)
   }
 
+  const { user } = useSelector(authSlice)
+  console.log('User from redux is', user)
+
   return (
     <div className={ styles["nav"] }>
        <div className={ styles["nav__left"] }>
-            <h4>Welcome, Achilles</h4>
+            <h4>Welcome, { user?.firstname }</h4>
        </div>
        <div className={ styles["nav__right"] }>
       { showLinksModal ?    <div className={ styles["nav__right__helper"] }>
           <div className={ styles["nav__right__helper--header"] }>
             <div>
-              <h3>Achilles Usuoyibo</h3>
-              <p>achillesusuoyibo7@gmail.com</p>
+              <h3>{ user?.firstname} { user?.lastname }</h3>
+              <p>{ user?.email }</p>
             </div>
             <hr />
           </div>
@@ -42,7 +47,7 @@ const DashboardNavbar = () => {
           </div>
         </div> : null }
         <Image src={ avater } alt="profile avatar" />
-        <p>achillesusuoyibo7@gmail.com</p>
+        <p>{ user?.email }</p>
         <span onClick={ toggleShowLinkModal }><HiMenuAlt3 size="1.5rem" color="#343434" style={{ cursor: "pointer" }} /></span>
        </div>
     </div>

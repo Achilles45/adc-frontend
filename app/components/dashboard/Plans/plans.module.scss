@@ -6,7 +6,7 @@
     display: grid;
     width: calc(1fr - 210px) !important;
     background: #FFF;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     border: 1px solid #ebebeb;
     &__header{
@@ -77,5 +77,8 @@
         overflow-x: auto;
         width: auto;
         gap: 20px;
+        @include phone {
+            gap: 10px !important;
+        }
     }
 }

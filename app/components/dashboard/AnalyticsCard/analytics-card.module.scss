@@ -13,8 +13,8 @@
     flex: 0 0 340px;
     position: relative;
     @include phone {
-        flex: 0 0 300px;
-        padding: 1.5rem;
+        flex: 0 0 260px;
+        padding: 1.2rem 1.2rem;
     }
 
     &__thumbnail{

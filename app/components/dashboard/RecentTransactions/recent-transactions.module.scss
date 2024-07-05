@@ -4,7 +4,7 @@
 .recent__transactions{
     margin-top: 2rem;
     background: #FFF;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     border-radius: 10px;
     border: 1px solid #ebebeb;
 
@@ -43,7 +43,7 @@
         display: block;
         text-align: center;
         @include phone {
-            padding: .8rem 1.6rem;
+            padding: .6rem 1.6rem;
             font-size: .8rem;
         }
     }
