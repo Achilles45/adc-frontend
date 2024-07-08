@@ -37,7 +37,7 @@ const PasswordResetCode = () => {
           {/* <Alert /> */}
           <div className={ styles["sign-up__content__details"] }>
           <span className={ styles["sign-up__content__details__login__link"] }>
-          <Link href="/auth/sign-up">Go back to Sign in</Link>
+          <Link href="/auth/sign-in">Go back to sign in</Link>
           </span>
         <h2>Recover your account</h2>
         <p>We have sent an email containing your verification code to the email you provided. Check your inbox or smam folder</p><br />

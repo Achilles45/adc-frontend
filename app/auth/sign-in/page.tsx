@@ -43,7 +43,7 @@ const SignIn = () => {
         <h2>Hey, welcome back!</h2>
         <p>Login with your credentials to continue to your dashboard</p><br />
           <Form>
-            <div>
+            <div  style={{ marginBottom: "1rem" }}>
               <label htmlFor="emailAddress">Email Address *</label>
               <Input 
                 name='email'

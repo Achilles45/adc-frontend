@@ -37,7 +37,7 @@ const ForgotPassword = () => {
           {/* <Alert /> */}
           <div className={ styles["sign-up__content__details"] }>
           <span className={ styles["sign-up__content__details__login__link"] }>
-          <Link href="/auth/sign-up">Go back to Sign in</Link>
+          <Link href="/auth/sign-in">Go back to sign in</Link>
           </span>
         <h2>Forgot your password?</h2>
         <p>It's okay if you forgot your password. We will help you recover it. Enter the email associated with your account to continue</p><br />
