@@ -63,6 +63,11 @@
     color: #1b1b1b;
     margin-top: .2rem;
 
+    @include phone {
+      padding: .95rem .7rem;
+      margin-bottom: .7rem;
+    }
+
 
     &:focus {
       border: 1px solid #e6e0e0;

@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./auth.module.scss"
+import styles from "../sign-in/auth.module.scss"
 import AuthOnboarding from "@/app/components/auth/AuthOnboarding"
 import Link from "next/link"
 import Input from '../../components/shared/Input';
@@ -9,10 +9,9 @@ import validationSchema from "@/app/utils/validationSchema";
 import { Formik, Form } from "formik"
 import * as yup from "yup";
 
-const SignIn = () => {
+const ForgotPassword = () => {
   const initialValues = {
     email: "",
-    password: ""
   }
 
   const { email,password } = validationSchema
@@ -38,10 +37,10 @@ const SignIn = () => {
           {/* <Alert /> */}
           <div className={ styles["sign-up__content__details"] }>
           <span className={ styles["sign-up__content__details__login__link"] }>
-          Don't have an account? <Link href="/auth/sign-up">Sign up</Link>
+          <Link href="/auth/sign-up">Go back to Sign in</Link>
           </span>
-        <h2>Hey, welcome back!</h2>
-        <p>Login with your credentials to continue to your dashboard</p><br />
+        <h2>Forgot your password?</h2>
+        <p>It's okay if you forgot your password. We will help you recover it. Enter the email associated with your account to continue</p><br />
           <Form>
             <div>
               <label htmlFor="emailAddress">Email Address *</label>
@@ -53,22 +52,12 @@ const SignIn = () => {
                 label="Email Address *"               
                 />
             </div>
-     
-              <div>
-              <label htmlFor="password">Password *</label><br />
-                <Input 
-                    name='password'
-                    type="password"
-                    placeholder='Password' 
-                    id="password" 
-                    label="Password *"                  
-                  />
-              </div>
-            <p className={ styles["sign-up__reset__helper"] }><Link href="/auth/forgot-password">Forget Password?</Link>
+
+            <p className={ styles["sign-up__reset__helper"] }><Link href="/auth/signin"></Link>
           </p>
             <Button 
               type='submit'
-              label='Login'
+              label='Send Verification Code'
               variant='primary'
               // loading={ loading }
               />
@@ -82,4 +71,4 @@ const SignIn = () => {
 }
 
 
-export default SignIn
+export default ForgotPassword
