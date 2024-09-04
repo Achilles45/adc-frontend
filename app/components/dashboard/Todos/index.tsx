@@ -6,7 +6,7 @@ import AddSavings from "../../modals/AddSavings"
 import { useState } from "react"
 
 const Todos = () => {
-   const [modal, setModal] = useState<number>(1)
+   const [modal, setModal] = useState<number>(0)
   return (
    <>
    { modal == 1 ? <AddSavings /> : null }
